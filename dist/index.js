@@ -1,15 +1,20 @@
 import express from 'express';
 import bookRouter from './routers/Book.js';
 const app = express();
-const PORT = 3000;
+const PORT = 80;
 app.use(express.json());
+
 app.get('/', (req, res) => {
-    res.send('Server UP!');
+    res.send('Welcomee Guys >>!');
 });
+
+app.get("/health",  (req, res) => {
+	res.sendStatus(200);
+});
+
+
 app.use('/book', bookRouter);
-// app.use((req, res) => {
-//     res.status(404).send('YOU requested sth I don`t have :( ')
-// });
+
 app.listen(PORT, () => {
     console.log(`App is running and Listening on port ${PORT} `);
 });
