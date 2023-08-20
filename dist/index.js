@@ -18,4 +18,3 @@ app.use('/book', bookRouter);
 app.listen(PORT, () => {
     console.log(`App is running and Listening on port ${PORT} `);
 });
-//# sourceMappingURL=index.js.map
