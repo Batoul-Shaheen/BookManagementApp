@@ -5,7 +5,8 @@
   "main": "./dist/index.js",
   "type": "module",
   "scripts": {
-    "build-tsc": " tsc -w",
+    "build-tsc": "tsc -w",
+    "build": "tsc",
     "run-watch": "nodemon ./dist",
     "dev": "concurrently \"npm run build-tsc\" \"npm run run-watch \" "
   },
